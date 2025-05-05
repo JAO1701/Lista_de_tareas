@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/notes.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <h1>Lista de Tareas</h1>
+ 
+  <div id="Reproductor_de_musica">
+    <h4>Reproductor de Música</h4>
+    <div id="SongText"><span id="SongName">Dale play para escuchar música</span></div>
+    <div class="botones_musica">
+      <button onclick="play()"><i class="fas fa-play"></i></button>
+      <button onclick="pause()"><i class="fas fa-pause"></i></button>
+      <button onclick="prev()"><i class="fas fa-backward"></i></button>
+      <button onclick="next()"><i class="fas fa-forward"></i></button>
+    </div>
+    
+  </div>
+  
+  
+  <form id="task-form">
+    <label for="task-input">Tarea:</label>
+    <input type="text" id="task-input" required>
+    <br><br>
+    <label for="date-input">Fecha:</label>
+    <input type="date" id="date-input" required>
+    <br><br>
+    <label for="period-input">Período del día:</label>
+    <select id="period-input" required>
+      <option value="morning">Mañana</option>
+      <option value="afternoon">Tarde</option>
+      <option value="evening">Noche</option>
+      <option value="specific">Horario específico</option>
+    </select>
+    <br><br>
+    <label for="specific-time-input">Horario específico:</label>
+    <input type="time" id="specific-time-input" disabled>
+    <br><br>
+    <button type="submit" id="add-task-btn">Agregar tarea</button>
+    <span id="clock" style="margin-left: 10px;"></span>
+
+  </form>
+  <ul id="task-list"></ul>
+  <script src="app.js"></script>
+</body>
+</html>
